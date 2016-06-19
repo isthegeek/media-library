@@ -4,7 +4,34 @@
 
 
 /* Generic styles */
-
+/* modified CSS*/
+select {
+    max-width: 100% !important;
+    padding: 2px !important;
+    line-height: 24px !important;
+    min-width: 100px !important;
+}
+.form--inline{
+    padding: 5px !important;
+    background: #f2f2f2 !important;
+    margin-bottom: 15px !important;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2) !important;
+}
+..file-browser-actions{
+    text-align:center;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    border: 0 !important;
+}
+.grid-item.item-style {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    padding: 10px !important;
+    background: #fff !important;
+    border: 1px solid #ddd !important;
+    margin: 7px !important;
+}
 .pager {
     padding: 20px;
 }
