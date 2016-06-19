@@ -1,0 +1,13 @@
+name: Media
+description: 'Media module for Drupal 8'
+type: module
+package: Media
+core: 8.x
+dependencies:
+  - media_entity:media_entity
+  - media_entity_image:media_entity_image
+  - video_embed_field:video_embed_field
+  - video_embed_field:video_embed_media
+  - media_entity_slideshow:media_entity_slideshow
+  - entity_browser:entity_browser
+  - dropzonejs:dropzonejs_eb_widget

@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Contains media.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function media_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the media module.
+    case 'help.page.media':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Media module for Drupal 8') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function media_form_alter(&$form, FormStateInterface &$form_state) {
+  if (isset($form['#form_id'])) {
+    if ($form['#form_id'] == 'entity_browser_media_library_form') {
+      // Attach our library.
+      $form['#attached']['library'][] = 'media/view';
+
+      // Style the submit button.
+      $form['actions']['submit']['#value'] = t('Select Media Files');
+      $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
+      $form['actions']['submit']['#attributes']['class'][] = 'entity-browser-modal-target';
+
+      // Wrap actions so we can float them at the bottom of the browser.
+      $form['actions_wrap'] = [
+          '#type' => 'container',
+          '#attributes' => [
+              'class' => 'file-browser-actions',
+          ],
+          0 => $form['actions'],
+      ];
+      unset($form['actions']);
+
+      // Add a class for generic styling.
+      $form['#attributes']['class'][] = 'file-browser-form';
+    }
+  }
+}
