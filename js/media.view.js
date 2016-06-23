@@ -34,9 +34,13 @@
         input.prop('checked', !input.prop('checked'));
         if (input.prop('checked')) {
           $(this).addClass('checked');
+          var render = $(this).find('.views-field-rendered-entity');
+          $(render).css('opacity',0.3);
         }
         else {
           $(this).removeClass('checked');
+          var render = $(this).find('.views-field-rendered-entity');
+          $(render).css('opacity',1);
         }
       });
     }
