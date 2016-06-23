@@ -1,7 +1,7 @@
 /**
  * @file media.user.js
  */
-(function ($, Drupal) {view
+(function ($, Drupal) {
 
   "use strict";
 
