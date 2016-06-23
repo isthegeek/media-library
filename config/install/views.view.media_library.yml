@@ -1,10 +1,6 @@
 langcode: en
 status: true
 dependencies:
-  config:
-    - media_entity.bundle.gallery
-    - media_entity.bundle.image
-    - media_entity.bundle.video
   module:
     - entity_browser
     - file
@@ -12,7 +8,7 @@ dependencies:
     - media_entity
     - user
 _core:
-  default_config_hash: tpItiS1ej7bR0UnwDuMsGs_JDbKYdngkqnq_J-HlhMU
+  default_config_hash: GOaQxr57QwtZ_Q84ImTo65p-gX-x24-dVpaxf01WrGE
 id: media_library
 label: 'Media Library'
 module: views
@@ -429,10 +425,7 @@ display:
           group_type: group
           admin_label: ''
           operator: in
-          value:
-            gallery: gallery
-            image: image
-            video: video
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -449,7 +442,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-            reduce: true
+            reduce: false
           is_grouped: false
           group_info:
             label: ''

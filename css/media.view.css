@@ -1,7 +1,6 @@
 /**
-* @file file_browser.view.css
+* @file media.view.css
 */
-
 
 /* Generic styles */
 /* modified CSS*/
@@ -21,11 +20,7 @@ select {
     margin-bottom: 15px !important;
     box-shadow: 0 2px 3px rgba(0,0,0,0.2) !important;
 }
-..file-browser-actions{
-    text-align:center;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2) !important;
-    border: 0 !important;
-}
+
 .grid-item.item-style {
     opacity: 1;
     transition: opacity .25s ease-in-out;
@@ -178,19 +173,6 @@ select {
     float: right;
 }
 
-.file-browser-form {
-    position: relative;
-    padding-bottom: 50px;
-}
-
-
-/* Remove border above tabs. */
-
-.file-browser-form .is-collapse-enabled .tabs:before,
-.file-browser-form .is-horizontal .tabs:before {
-    background-color: transparent;
-}
-
 input[type="submit"][name="filter"] {
     margin-left: 10px;
     margin-top: 30px;
@@ -200,15 +182,6 @@ input[type="submit"][name="filter"] {
     margin: 0;
 }
 
-.file-browser-actions {
-    position: fixed;
-    bottom: 0;
-    z-index: 2;
-    text-align:center;
-    padding: 10px;
-    width: 100%;
-    background: white;
-}
 /*Masonry CSS*/
 .item {
     display: inline-block;
@@ -224,4 +197,3 @@ input[type="submit"][name="filter"] {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
-

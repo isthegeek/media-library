@@ -10,6 +10,14 @@ use Drupal\simpletest\WebTestBase;
  * @group media
  */
 class GalleryBundleTest extends WebTestBase {
+  /**
+   * Exempt from strict schema checking.
+   *
+   * @see \Drupal\Core\Config\Testing\ConfigSchemaChecker
+   *
+   * @var bool
+   */
+  protected $strictConfigSchema = FALSE;
 
   /**
    * Modules to enable.
@@ -35,7 +43,7 @@ class GalleryBundleTest extends WebTestBase {
    */
   protected function setUp() {
     parent::setUp();
-    $this->testBundle = $this->container->get('entity.manager')->getStorage('media_bundle')->load('gallery');
+    $this->testBundle = $this->container->get('entity_type.manager')->getStorage('media_bundle')->load('gallery');
 
     $adminUser = $this->drupalCreateUser([
       'view media',
@@ -85,7 +93,7 @@ class GalleryBundleTest extends WebTestBase {
     $this->drupalPostForm(NULL, $edit, t('Save and publish'));
 
     // Let's load all the media items.
-    $gallery_id = \Drupal::entityQuery('media')->condition('bundle', 'gallery')->sort('created', 'DESC')->execute();
+    $gallery_id = $this->container->get('entity.query')->get('media')->condition('bundle', 'gallery')->sort('created', 'DESC')->execute();
     $gallery = $this->loadMediaItem(reset($gallery_id));
     $image = $this->loadMediaItem($imageItem['id']);
     $video = $this->loadMediaItem($videoItem['id']);
@@ -107,7 +115,7 @@ class GalleryBundleTest extends WebTestBase {
     $this->drupalPostForm(NULL, $edit, t('Save and publish'));
 
     // Let's check the thumbnail again.
-    $gallery_id = \Drupal::entityQuery('media')->condition('bundle', 'gallery')->sort('created', 'DESC')->execute();
+    $gallery_id = $this->container->get('entity.query')->get('media')->condition('bundle', 'gallery')->sort('created', 'DESC')->execute();
     $gallery = $this->loadMediaItem(reset($gallery_id));
     $gallery_thumbnail = $gallery->getType()->thumbnail($gallery);
     $this->assertEqual($gallery_thumbnail, $video_thumbnail, "Correct thumbnail detected.");
@@ -129,7 +137,7 @@ class GalleryBundleTest extends WebTestBase {
     $this->drupalPostForm('media/add/image', $edit, t('Save and publish'));
     $this->drupalPostForm(NULL, ['field_image[0][alt]' => $name], t('Save and publish'));
     // Obtain the image id.
-    $media_id = \Drupal::entityQuery('media')->condition('bundle', 'image')->sort('created', 'DESC')->execute();
+    $media_id = $this->container->get('entity.query')->get('media')->condition('bundle', 'image')->sort('created', 'DESC')->execute();
     $media_id = reset($media_id);
     $edit['id'] = $media_id;
 
@@ -146,7 +154,7 @@ class GalleryBundleTest extends WebTestBase {
     ];
     $this->drupalPostForm('media/add/video', $edit, t('Save and publish'));
     // Obtain the video id.
-    $media_id = \Drupal::entityQuery('media')->condition('bundle', 'video')->sort('created', 'DESC')->execute();
+    $media_id = $this->container->get('entity.query')->get('media')->condition('bundle', 'video')->sort('created', 'DESC')->execute();
     $media_id = reset($media_id);
     $edit['id'] = $media_id;
 

@@ -10,8 +10,8 @@ id: media.gallery.field_slide
 field_name: field_slide
 entity_type: media
 bundle: gallery
-label: Slide
-description: ''
+label: Slides
+description: 'Image or Video type of content for slideshow'
 required: true
 translatable: false
 default_value: {  }

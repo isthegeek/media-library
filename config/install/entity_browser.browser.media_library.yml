@@ -5,7 +5,7 @@ dependencies:
     - views
 name: media_library
 label: 'Media Library'
-display: iframe
+display: modal
 display_configuration:
   widget_ids:
     735d146c-a4b2-4327-a057-d109e0905e05: 'Upload files'
@@ -30,7 +30,7 @@ widgets:
   735d146c-a4b2-4327-a057-d109e0905e05:
     settings:
       upload_location: 'public://'
-      dropzone_description: 'This is a dropzone description'
+      dropzone_description: 'Drag and drop files here to upload'
       extensions: 'png jpg jpeg gif'
       max_filesize: '2 M'
     uuid: 735d146c-a4b2-4327-a057-d109e0905e05
