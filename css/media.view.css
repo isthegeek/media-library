@@ -115,7 +115,7 @@ select {
 }
 
 .view-content {
-   max-width:464px;
+   max-width:100%;
 }
 .view-content:after{
   content: '';
