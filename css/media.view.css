@@ -70,7 +70,7 @@ select {
 @media only screen and (min-width: 1600px) {
     .grid-sizer,
     .grid-item {
-        width: 15%;
+        width: 20%;
     }
     .gutter-sizer {
         width: 10px;
@@ -88,7 +88,7 @@ select {
     background: #fff;
     padding: 1.5em;
     margin: 0 0 1.5em;
-    width: 50%;
+    width: 100%;
     height:auto;
     box-sizing: border-box;
     cursor:pointer;
@@ -118,8 +118,7 @@ select {
 }
 
 .view-content {
-    margin: 0 auto;
-    width: 100% !important;
+   
 }
 
 .grid-item img {
@@ -143,8 +142,6 @@ select {
     position:relative;
     display:block;
     clear:both;
-    top: 0;
-    left: 0;
     background: transparent url("../images/checkmark.svg") no-repeat center center;
     background-size: 0;
     -webkit-transition: all 0.2s;
