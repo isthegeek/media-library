@@ -10,7 +10,7 @@
    */
 
   Drupal.behaviors.MediaLibraryView = {
-   attach: function (context, settings) {
+    attach: function (context, settings) {
       var $view = $('.view-content grid', context);
       $view.once('media').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
 

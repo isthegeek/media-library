@@ -7,6 +7,7 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_help().
@@ -28,19 +29,17 @@ function media_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_form_alter().
  */
 function media_form_alter(&$form, FormStateInterface &$form_state) {
-  if (isset($form['#form_id'])) {
-    if ($form['#form_id'] == 'entity_browser_media_library_form') {
-      // Attach our library.
-      $form['#attached']['library'][] = 'media/view';
+  if ($form['#form_id'] == 'entity_browser_media_library_form') {
+    // Attach our library.
+    $form['#attached']['library'][] = 'media/view';
 
-      // Style the submit button.
-      $form['actions']['submit']['#value'] = t('Select Media Files');
-      $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
-      $form['actions']['submit']['#attributes']['class'][] = 'entity-browser-modal-target';
+    // Style the submit button.
+    $form['actions']['submit']['#value'] = t('Select Media Files');
+    $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
+    $form['actions']['submit']['#attributes']['class'][] = 'entity-browser-modal-target';
 
-      // Add a class for generic styling.
-      $form['#attributes']['class'][] = 'media-library-form';
-    }
+    // Add a class for generic styling.
+    $form['#attributes']['class'][] = 'media-library-form';
   }
 }
 
@@ -58,3 +57,13 @@ function media_library_info_alter(&$libraries, $extension) {
   }
 }
 
+/**
+ * Implements hook_views_pre_render().
+ *
+ * Adds the media.user library to the media_library view.
+ */
+function media_views_pre_render(ViewExecutable $view) {
+  if (isset($view) && ($view->storage->id() == 'media_library')) {
+    $view->element['#attached']['library'][] = 'media/user';
+  }
+}

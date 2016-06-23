@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.gallery.field_slide
+    - media_entity.bundle.gallery
+  module:
+    - image
+_core:
+  default_config_hash: CIRtr4QojPiF2usjVqXYMAP4S4ybT17XdhbAvYECAvY
+id: media.gallery.media_library
+targetEntityType: media
+bundle: gallery
+mode: media_library
+content:
+  name:
+    type: string
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_slide: true
+  uid: true
