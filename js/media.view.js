@@ -11,7 +11,7 @@
 
   Drupal.behaviors.MediaLibraryView = {
    attach: function (context, settings) {
-      var $view = $('.view-content', context);
+      var $view = $('.view-content grid', context);
       $view.once('media').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
 
       // Indicate that images are loading.
@@ -19,7 +19,7 @@
       $view.imagesLoaded(function () {
         $view.masonry({
           columnWidth: '.grid-sizer',
-          gutter: '.gutter-sizer',
+          gutter: '20',
           itemSelector: '.grid-item',
           percentPosition: true,
           isFitWidth:true
