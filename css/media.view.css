@@ -114,6 +114,7 @@ select {
 
 .grid-item.checked {
     border: 2px solid #37802f !important;
+    background: url("../images/checkmark.svg") no-repeat center center !important;
 }
 
 .view-content {
