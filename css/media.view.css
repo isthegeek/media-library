@@ -139,7 +139,6 @@ select {
 
 .grid-item:after {
     content: " ";
-    width: 50%;
     float:left;
     position:relative;
     display:block;
