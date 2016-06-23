@@ -82,6 +82,7 @@ select {
     position:relative;
     text-align: center;
     overflow: hidden;
+    float:left;
     display: inline-block;
     background: #fff;
     padding: 1.5em;
@@ -134,7 +135,8 @@ select {
 
 .grid-item:after {
     content: " ";
-    width: 100%;
+    width: 50%;
+    float:left;
     position:relative;
     top: 0;
     left: 0;
