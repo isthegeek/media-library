@@ -19,7 +19,7 @@
       $view.imagesLoaded(function () {
         $view.masonry({
           columnWidth: '.grid-sizer',
-          gutter: '20',
+          gutter: '.gutter-sizer',
           itemSelector: '.grid-item',
           percentPosition: true,
           isFitWidth:true
