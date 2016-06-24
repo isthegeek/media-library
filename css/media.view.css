@@ -206,7 +206,7 @@ input[type="submit"][name="filter"] {
 @media only screen and (min-width: 320px) {
     .grid-size-library,
     .grid-item-library {
-        width: 100%;
+        width: 100% !important;
     }
     .gutter-sizer-library {
         width: 5px;
@@ -219,7 +219,7 @@ input[type="submit"][name="filter"] {
 @media only screen and (min-width: 768px) {
     .grid-sizer-library,
     .grid-item-library {
-        width: 96%;
+        width: 96% !important;
     }
     .gutter-sizer-library {
         width: 10px;
@@ -232,7 +232,7 @@ input[type="submit"][name="filter"] {
 @media only screen and (min-width: 992px) {
     .grid-sizer-library,
     .grid-item-library {
-        width: 96%;
+        width: 96% !important;
     }
     .gutter-size-library {
         width: 10px;
@@ -246,7 +246,7 @@ input[type="submit"][name="filter"] {
 @media only screen and (min-width: 1600px) {
     .grid-size-library,
     .grid-item-library {
-        width: 24%;
+        width: 24% !important;
     }
     .gutter-size-library {
         width: 7px;
