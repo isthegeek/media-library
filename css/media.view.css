@@ -7,7 +7,7 @@
 .view-content{
     text-align: center;
     margin: 0px auto;
-    min-width: 70%;
+    width: 100% !important;
 }
 select {
     max-width: 100% !important;
@@ -16,7 +16,7 @@ select {
     min-width: 100px !important;
 }
 .form--inline{
-    padding: 5px !important;
+    padding: 5px 5px 5px 40px !important;
     background: #f2f2f2 !important;
     margin-bottom: 15px !important;
     box-shadow: 0 2px 3px rgba(0,0,0,0.2) !important;
@@ -195,7 +195,7 @@ input[type="submit"][name="filter"] {
 
 
 /********************************************************************/
-/*User.css*/
+/*User library.css*/
 /* Generic styles */
 /* modified CSS*/
 
@@ -219,7 +219,7 @@ input[type="submit"][name="filter"] {
 @media only screen and (min-width: 768px) {
     .grid-sizer-library,
     .grid-item-library {
-        width: 46%;
+        width: 96%;
     }
     .gutter-sizer-library {
         width: 10px;
@@ -232,7 +232,7 @@ input[type="submit"][name="filter"] {
 @media only screen and (min-width: 992px) {
     .grid-sizer-library,
     .grid-item-library {
-        width: 23%;
+        width: 96%;
     }
     .gutter-size-library {
         width: 10px;
@@ -246,7 +246,7 @@ input[type="submit"][name="filter"] {
 @media only screen and (min-width: 1600px) {
     .grid-size-library,
     .grid-item-library {
-        width: 33.333%;
+        width: 24%;
     }
     .gutter-size-library {
         width: 7px;
