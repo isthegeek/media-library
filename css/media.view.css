@@ -287,3 +287,6 @@ input[type="submit"][name="filter"] {
     transition: all 0.2s;
 }
 
+.grid-item .views-field-entity-browser-select {
+  display: none;
+}
