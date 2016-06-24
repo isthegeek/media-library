@@ -204,10 +204,6 @@ input[type="submit"][name="filter"] {
     border: 1px solid #ddd !important;
     margin: 8px !important;
 }
-.pager {
-    padding: 20px;
-}
-
 /* set default standard media queries for responsive grid. */
 @media only screen and (min-width: 320px) {
     .grid-size-user,
