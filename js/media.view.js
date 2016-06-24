@@ -44,25 +44,7 @@
         }
       });
       
-      /*For User Page*/
-      
-      var $viewuser = $('.view-content-user', context);
-      $viewuser.once('media').prepend('<div class="grid-sizer-user"></div><div class="gutter-sizer-user"></div>');
-
-      // Indicate that images are loading.
-      $viewuser.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
-      $viewuser.imagesLoaded(function () {
-        $viewuser.masonry({
-          columnWidth: '.grid-sizer-user',
-          gutter: '.gutter-sizer-user',
-          itemSelector: '.grid-item-user',
-          percentPosition: true,
-          isFitWidth:true
-        });
-        // Add a class to reveal the loaded images, which avoids FOUC.
-        $('.grid-item-user').addClass('item-style');
-        $viewuser.find('.ajax-progress').remove();
-      });
+     
     }
   };
 
