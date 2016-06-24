@@ -4,10 +4,6 @@
 
 /* Generic styles */
 /* modified CSS*/
-.view-content{
-    padding:10px;
-    margin : auto;
-}
 select {
     max-width: 100% !important;
     padding: 2px !important;
