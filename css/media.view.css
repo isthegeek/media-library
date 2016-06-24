@@ -27,6 +27,9 @@ select {
     border: 1px solid #ddd !important;
     margin: 8px !important;
 }
+.details-wrapper{
+    text-align:center;
+}
 .pager {
     padding: 20px;
 }
