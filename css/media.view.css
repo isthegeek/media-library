@@ -4,8 +4,8 @@
 
 /* Generic styles */
 /* modified CSS*/
-body{
-    padding:14px;
+.view-content{
+    padding:10px;
     margin : auto;
 }
 select {
@@ -323,37 +323,3 @@ input[type="submit"][name="filter"] {
 }
 
 
-.grid-item-info {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .8);
-}
-
-.grid-item-info-left,
-.grid-item-info-right {
-    padding: 5px;
-    color: white;
-}
-
-.grid-item-info-left {
-    float: left;
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.grid-item-info-right {
-    float: right;
-}
-
-input[type="submit"][name="filter"] {
-    margin-left: 10px;
-    margin-top: 30px;
-}
-
-.layout-container {
-    margin: 0;
-}
