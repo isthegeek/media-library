@@ -45,8 +45,8 @@
       });
        /*For User Page*/
       
-      var $viewuser = $('.view-conten-library', context);
-      $viewuser.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-size-library"></div>');
+      var $viewuser = $('.view-content-library', context);
+      $viewuser.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
 
       // Indicate that images are loading.
       $viewuser.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
