@@ -2,7 +2,7 @@
 
 /* Generic styles */
 /* modified CSS*/
-select {
+/*select {
     max-width: 100% !important;
     padding: 2px !important;
     line-height: 24px !important;
@@ -27,7 +27,7 @@ select {
     margin: 8px !important;
 }
 /* set default standard media queries for responsive grid. */
-@media only screen and (min-width: 320px) {
+/*@media only screen and (min-width: 320px) {
     .grid-size,
     .grid-item {
         width: 100%;
@@ -65,9 +65,9 @@ select {
         margin-bottom:10px;
     }
 }
-
+*/
 /* Jump back down for XL screens to better utilize the space. */
-@media only screen and (min-width: 1600px) {
+/*@media only screen and (min-width: 1600px) {
     .grid-size,
     .grid-item {
         width: 33.333%;
@@ -138,6 +138,7 @@ select {
     clear:both;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
-}
+}*/
 
 
+*/
