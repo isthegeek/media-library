@@ -43,6 +43,24 @@
           $(render).css('opacity',1);
         }
       });
+      /*For User Page*/
+      var $view-user = $('.view-content-user grid', context);
+      $view.once('media').prepend('<div class="grid-sizer-user"></div><div class="gutter-sizer-user"></div>');
+
+      // Indicate that images are loading.
+      $view.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
+      $view.imagesLoaded(function () {
+        $view.masonry({
+          columnWidth: '.grid-sizer-user',
+          gutter: '.gutter-sizer-user',
+          itemSelector: '.grid-item-user',
+          percentPosition: true,
+          isFitWidth:true
+        });
+        // Add a class to reveal the loaded images, which avoids FOUC.
+        $('.grid-item-user').addClass('item-style');
+        $view.find('.ajax-progress').remove();
+      });
     }
   };
 
