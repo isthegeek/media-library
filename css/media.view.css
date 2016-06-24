@@ -42,7 +42,10 @@ select {
         width: 100%;
     }
     .gutter-sizer {
-        width: 20px;
+        width: 10px;
+    }
+    .grid-item {
+        margin-bottom: 10px;
     }
 }
 
@@ -52,7 +55,10 @@ select {
         width: 46%;
     }
     .gutter-sizer {
-        width: 20px;
+        width: 10px;
+    }
+    .grid-item {
+        margin-bottom: 10px;
     }
 }
 
@@ -64,6 +70,9 @@ select {
     .gutter-sizer {
         width: 10px;
     }
+    .grid-item {
+        margin-bottom: 10px;
+    }
 }
 
 /* Jump back down for XL screens to better utilize the space. */
@@ -74,6 +83,9 @@ select {
     }
     .gutter-sizer {
         width: 10px;
+    }
+    .grid-item {
+        margin-bottom: 10px;
     }
 }
 
