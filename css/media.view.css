@@ -16,7 +16,7 @@ select {
     min-width: 100px !important;
 }
 .form--inline{
-    padding: 5px 5px 5px 40px !important;
+    padding: 5px 5px 5px 20px !important;
     background: #f2f2f2 !important;
     margin-bottom: 15px !important;
     box-shadow: 0 2px 3px rgba(0,0,0,0.2) !important;
@@ -232,7 +232,7 @@ input[type="submit"][name="filter"] {
 @media only screen and (min-width: 992px) {
     .grid-sizer-library,
     .grid-item-library {
-        width: 96% !important;
+        width: 31.33% !important;
     }
     .gutter-size-library {
         width: 10px;
