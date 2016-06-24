@@ -4,6 +4,11 @@
 
 /* Generic styles */
 /* modified CSS*/
+.view-content{
+    text-align: center;
+    margin: 0px auto;
+    min-width: 70%;
+}
 select {
     max-width: 100% !important;
     padding: 2px !important;
@@ -118,8 +123,7 @@ select {
     border: 2px solid #37802f !important;
     background: url("../images/checkmark.svg") no-repeat center center !important;
 }
-
-.view-content , .view-content-library {
+.view-content-library {
     min-width:100%;
 }
 .view-content:after, .view-content-library:after{
@@ -189,9 +193,6 @@ input[type="submit"][name="filter"] {
     margin-top: 30px;
 }
 
-.layout-container {
-    margin: 0;
-}
 
 /********************************************************************/
 /*User.css*/
