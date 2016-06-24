@@ -11,7 +11,7 @@
 
   Drupal.behaviors.MediaLibraryView = {
     attach: function (context, settings) {
-      var $view = $('.view-content grid', context);
+      var $view = $('.view-content', context);
       $view.once('media').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
 
       // Indicate that images are loading.
@@ -46,7 +46,7 @@
       
       /*For User Page*/
       
-      var $viewuser = $('.view-content-user grid', context);
+      var $viewuser = $('.view-content-user', context);
       $viewuser.once('media').prepend('<div class="grid-sizer-user"></div><div class="gutter-sizer-user"></div>');
 
       // Indicate that images are loading.
