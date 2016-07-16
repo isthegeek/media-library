@@ -5,6 +5,8 @@
  * Defines library requirements for Media module.
  */
 
+use Drupal\views\Entity\View;
+
 /**
  * Implements hook_requirements().
  */
@@ -45,4 +47,15 @@ https://github.com/desandro/masonry/releases and place it in /libraries'
   }
 
   return $requirements;
+}
+
+/**
+ * Implements hook_install().
+ */
+function media_install() {
+  // Disable the media view provided by media_entity.
+  if ($view = View::load('media')) {
+    $view->set('status', FALSE);
+    $view->save();
+  }
 }

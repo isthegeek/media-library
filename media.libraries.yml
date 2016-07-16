@@ -1,16 +1,3 @@
-user:
-  version: VERSION
-  js:
-    js/media.user.js: {}
-  css:
-    theme:
-      css/media.user.css: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - media/imagesloaded
-    - media/masonry
-
 view:
   version: VERSION
   js:

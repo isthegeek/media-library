@@ -43,8 +43,8 @@
           $(render).css('opacity',1);
         }
       });
-       /*For User Page*/
-      
+      /*For User Page*/
+
       var $viewuser = $('.view-content-library', context);
       $viewuser.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
 
@@ -62,7 +62,7 @@
         $('.grid-item-library').addClass('item-style');
         $viewuser.find('.ajax-progress').remove();
       });
-     
+
     }
   };
 

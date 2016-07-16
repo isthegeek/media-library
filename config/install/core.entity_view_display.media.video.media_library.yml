@@ -6,16 +6,27 @@ dependencies:
     - field.field.media.video.field_id
     - field.field.media.video.field_source
     - field.field.media.video.field_video
+    - image.style.media_library_item
     - media_entity.bundle.video
   module:
     - image
+    - user
 _core:
-  default_config_hash: q6xr7_L-NCcAX0TTes4nWIERdaTjXA89lyu5ACFLrL4
+  default_config_hash: pZES-uG_mHURoSF49BhzbQPzEz32mWcPz4yxP-Nzrp0
 id: media.video.media_library
 targetEntityType: media
 bundle: video
 mode: media_library
 content:
+  created:
+    type: timestamp
+    weight: 3
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
   name:
     label: hidden
     type: string
@@ -28,12 +39,16 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: ''
+      image_style: media_library_item
       image_link: ''
     third_party_settings: {  }
+  uid:
+    type: author
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  created: true
   field_id: true
   field_source: true
   field_video: true
-  uid: true

@@ -134,8 +134,6 @@ select {
 
 .grid-item img, .grid-item-library img {
     vertical-align: bottom;
-    width: 100%;
-    height: auto;
 }
 
 .grid-item img::selection , .grid-item-library img::selection{
@@ -246,7 +244,7 @@ input[type="submit"][name="filter"] {
 @media only screen and (min-width: 1280px) {
     .grid-size-library,
     .grid-item-library {
-        width: 24% !important;
+        width: 23% !important;
     }
     .gutter-size-library {
         width: 7px;
@@ -288,5 +286,5 @@ input[type="submit"][name="filter"] {
 }
 
 .grid-item .views-field-entity-browser-select {
-  display: none;
+    display: none;
 }
