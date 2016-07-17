@@ -289,13 +289,13 @@ input[type="submit"][name="filter"] {
     display: none;
 }
 /*Slides*/
-.entities-list .item-container{
+.entities-list .slides{
      position:relative;
     text-align: center;
     float:left;
     background: #fff;
     padding: 1.5em;
-    width: 45%;
+    width: 33%;
     margin-bottom: 20px;
     height:auto;
     box-sizing: border-box;
