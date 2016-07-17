@@ -63,7 +63,7 @@
         $viewuser.find('.ajax-progress').remove();
       });
       /*Slides View*/
-      var $viewslides = $('.entities-list .item-content', context);
+      var $viewslides = $('.entities-list .slides', context);
       $viewuser.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
 
       // Indicate that images are loading.
