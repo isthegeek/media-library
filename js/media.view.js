@@ -62,7 +62,24 @@
         $('.grid-item-library').addClass('item-style');
         $viewuser.find('.ajax-progress').remove();
       });
+      /*Slides View*/
+      var $viewslides = $('.entities-list .item-content', context);
+      $viewuser.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
 
+      // Indicate that images are loading.
+      $viewslides.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
+      $viewslides.imagesLoaded(function () {
+        $viewslides.masonry({
+          columnWidth: '.grid-sizer-library',
+          gutter: '.gutter-sizer-library',
+          itemSelector: '.grid-item-library',
+          percentPosition: true,
+          isFitWidth:true
+        });
+        // Add a class to reveal the loaded images, which avoids FOUC.
+        $('.grid-item-library').addClass('item-style');
+        $viewslides.find('.ajax-progress').remove();
+      });
     }
   };
 
