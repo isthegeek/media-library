@@ -63,13 +63,13 @@
         $viewuser.find('.ajax-progress').remove();
       });
       /*Slides View*/
-      var $view-row = $('.entities-list', context);
-      $view-row.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
+      var $viewrow = $('.entities-list', context);
+      $viewrow.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
 
       // Indicate that images are loading.
-      $view-row.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
-      $view-row.imagesLoaded(function () {
-        $view-row.masonry({
+      $viewrow.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
+      $viewrow.imagesLoaded(function () {
+        $viewrow.masonry({
           columnWidth: '.grid-sizer-library',
           gutter: '.gutter-sizer-library',
           itemSelector: '.grid-item-library',
@@ -78,7 +78,7 @@
         });
         // Add a class to reveal the loaded images, which avoids FOUC.
         $('.grid-item-library').addClass('item-style');
-        $view-row.find('.ajax-progress').remove();
+        $viewrow.find('.ajax-progress').remove();
       });
     }
   };
