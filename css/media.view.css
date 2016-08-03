@@ -4,7 +4,7 @@
 
 /* Generic styles */
 /* modified CSS*/
-.view-content{
+.view-content, .enitities-list{
     text-align: center;
     margin: 0px auto;
     width: 100% !important;
@@ -22,7 +22,7 @@ select {
     box-shadow: 0 2px 3px rgba(0,0,0,0.2) !important;
 }
 
-.grid-item.item-style, .grid-item-library.item-style,.rendered-entity.item-style {
+.grid-item.item-style, .grid-item-library.item-style,.rendered-entity {
     opacity: 1;
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
