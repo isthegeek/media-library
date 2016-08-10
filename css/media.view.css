@@ -4,7 +4,7 @@
 
 /* Generic styles */
 /* modified CSS*/
-.view-content, .enitities-list{
+.view-content, .entities-list{
     text-align: center;
     margin: 0px auto;
     width: 100% !important;
@@ -273,9 +273,17 @@ input[type="submit"][name="filter"] {
     -webkit-border-radius: 3px;
     transition: .2s;
 }
+.item-container:after {
+    content: " ";
+    float:left;
+    position:relative;
+    display:block;
+    clear:both;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
 
-
-.item-container, .grid-item-library:after {
+ .grid-item-library:after {
     content: " ";
     float:left;
     position:relative;
