@@ -303,4 +303,6 @@ input[type="submit"][name="filter"] {
 .grid-item .views-field-entity-browser-select {
     display: none;
 }
-
+.clear-left{
+    clear:left;
+}
