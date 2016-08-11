@@ -62,6 +62,7 @@
         $('.grid-item-library').addClass('item-style');
         $viewuser.find('.ajax-progress').remove();
       });
+      
       /*Slides View*/
       var $viewrow = $('.entities-list', context);
       $viewrow.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
@@ -78,7 +79,7 @@
         });
         
         // Add a class to reveal the loaded images, which avoids FOUC.
-        $('.grid-item-library').addClass('item-style');
+        $('.item-container').addClass('item-style');
         $viewrow.find('.ajax-progress').remove();
       });
     }
