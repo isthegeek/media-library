@@ -57,7 +57,7 @@ select {
 @media only screen and (min-width: 768px) {
     .grid-sizer,
     .grid-item {
-        width: 46% !important;
+        width: 44% !important;
     }
     .gutter-sizer {
         width: 10px;
@@ -306,6 +306,11 @@ input[type="submit"][name="filter"] {
     clear:left;
 }
 /*New Masonry CSS*/
+
+.entities-list, .view-content{ /* Masonry container */
+    column-count: 4;
+    column-gap: 1em;
+}
 
 .entities-list, .view-content {
     margin: 1.5em 0;
