@@ -233,7 +233,7 @@ input[type="submit"][name="filter"] {
     .grid-item-library, .item-container  {
         width: 31.33% !important;
     }
-    .gutter-size-library {
+    .gutter-sizer-library {
         width: 10px;
     }
     .grid-item-library,.item-container{
@@ -247,7 +247,7 @@ input[type="submit"][name="filter"] {
     .grid-item-library, .item-container  {
         width: 23% !important;
     }
-    .gutter-size-library {
+    .gutter-sizer-library {
         width: 7px;
     }
     .grid-item-library{
@@ -259,7 +259,7 @@ input[type="submit"][name="filter"] {
     .grid-item-library, .item-container  {
         width: 21% !important;
     }
-    .gutter-size-library {
+    .gutter-sizer-library {
         width: 7px;
     }
     .grid-item-library{
