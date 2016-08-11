@@ -115,7 +115,6 @@ select {
     transition: .2s;
 }
 
-
 .grid-item:hover {
     border: 2px solid #37802f !important;
 }
@@ -198,9 +197,6 @@ input[type="submit"][name="filter"] {
 /* Generic styles */
 /* modified CSS*/
 
-
-
-
 /* set default standard media queries for responsive grid. */
 @media only screen and (min-width: 320px) {
     .grid-size-library,
@@ -254,6 +250,7 @@ input[type="submit"][name="filter"] {
         margin-bottom:10px;
     }
 }
+
 @media only screen and (min-width: 1680px) {
     .grid-size-library,
     .grid-item-library, .item-container  {
@@ -315,8 +312,7 @@ input[type="submit"][name="filter"] {
 }
 /*New Masonry CSS*/
 
-
-.entities-list {
+.entities-list, .view-content {
     margin: 1.5em 0;
     padding: 0;
     -moz-column-gap: 1.5em;
@@ -325,7 +321,7 @@ input[type="submit"][name="filter"] {
     font-size: .85em;
 }
 
-.item-container {
+.item-container, .grid-item, .grid-item-library {
     display: inline-block;
     background: #fff;
     padding: 1em;
@@ -334,43 +330,57 @@ input[type="submit"][name="filter"] {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-shadow: 2px 2px 4px 0 #ccc;
 }
 
 @media only screen and (min-width: 400px) {
-    .entities-list {
+    .entities-list, .grid-item-library {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+    .grid-item {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .entities-list, .grid-item-library {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+    .grid-item {
         -moz-column-count: 2;
         -webkit-column-count: 2;
         column-count: 2;
     }
 }
 
-@media only screen and (min-width: 700px) {
-    .entities-list {
-        -moz-column-count: 3;
-        -webkit-column-count: 3;
-        column-count: 3;
-    }
-}
-
 @media only screen and (min-width: 900px) {
-    .entities-list {
+    .entities-list, .grid-item-library {
         -moz-column-count: 4;
         -webkit-column-count: 4;
         column-count: 4;
     }
+    .grid-item {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
 }
 
 @media only screen and (min-width: 1100px) {
-    .masonry {
+    .entities-list, .grid-item-library {
         -moz-column-count: 5;
         -webkit-column-count: 5;
         column-count: 5;
     }
-}
-
-@media only screen and (min-width: 1280px) {
-    .wrapper {
-        width: 1260px;
+    .grid-item {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
     }
 }
+
