@@ -230,7 +230,7 @@ input[type="submit"][name="filter"] {
 
 @media only screen and (min-width: 992px) {
     .grid-sizer-library,
-    .grid-item-library  {
+    .grid-item-library, .item-container  {
         width: 31.33% !important;
     }
     .gutter-size-library {
@@ -244,8 +244,20 @@ input[type="submit"][name="filter"] {
 /* Jump back down for XL screens to better utilize the space. */
 @media only screen and (min-width: 1280px) {
     .grid-size-library,
-    .grid-item-library,.item-container  {
+    .grid-item-library, .item-container  {
         width: 23% !important;
+    }
+    .gutter-size-library {
+        width: 7px;
+    }
+    .grid-item-library{
+        margin-bottom:10px;
+    }
+}
+@media only screen and (min-width: 1680px) {
+    .grid-size-library,
+    .grid-item-library, .item-container  {
+        width: 21% !important;
     }
     .gutter-size-library {
         width: 7px;
@@ -263,6 +275,7 @@ input[type="submit"][name="filter"] {
     background: #fff;
     padding: 1.5em;
     width: 23%;
+    border: 1px solid #ddd !important;
     margin-bottom: 8px;
     height:auto;
     box-sizing: border-box;
