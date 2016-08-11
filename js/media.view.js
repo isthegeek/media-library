@@ -76,6 +76,26 @@
           percentPosition: true,
           isFitWidth:true
         });
+        window.twttr = function (d, s, id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+        }(document, 'script', 'twitter-wjs');
+
+        twttr.ready(function (twttr) {
+          twttr.events.bind('loaded', function (event) {
+        //MASONRY RELAYOUT HERE
+          $viewrow.masonry({
+          columnWidth: '.grid-sizer-library',
+          gutter: '.gutter-sizer-library',
+          itemSelector: '.item-container',
+          percentPosition: true,
+          isFitWidth:true
+            });
+          });
+        });
         // Add a class to reveal the loaded images, which avoids FOUC.
         $('.grid-item-library').addClass('item-style');
         $viewrow.find('.ajax-progress').remove();
