@@ -204,7 +204,7 @@ input[type="submit"][name="filter"] {
 /* set default standard media queries for responsive grid. */
 @media only screen and (min-width: 320px) {
     .grid-size-library,
-    .grid-item-library {
+    .grid-item-library,.item-container  {
         width: 100% !important;
     }
     .gutter-sizer-library {
@@ -217,7 +217,7 @@ input[type="submit"][name="filter"] {
 
 @media only screen and (min-width: 768px) {
     .grid-sizer-library,
-    .grid-item-library {
+    .grid-item-library,.item-container  {
         width: 96% !important;
     }
     .gutter-sizer-library {
@@ -230,7 +230,7 @@ input[type="submit"][name="filter"] {
 
 @media only screen and (min-width: 992px) {
     .grid-sizer-library,
-    .grid-item-library {
+    .grid-item-library,.item-container  {
         width: 31.33% !important;
     }
     .gutter-size-library {
@@ -244,7 +244,7 @@ input[type="submit"][name="filter"] {
 /* Jump back down for XL screens to better utilize the space. */
 @media only screen and (min-width: 1280px) {
     .grid-size-library,
-    .grid-item-library {
+    .grid-item-library,.item-container  {
         width: 23% !important;
     }
     .gutter-size-library {
@@ -262,7 +262,7 @@ input[type="submit"][name="filter"] {
     float:left;
     background: #fff;
     padding: 1.5em;
-    width: 24%;
+    width: 23%;
     margin-bottom: 8px;
     height:auto;
     box-sizing: border-box;
