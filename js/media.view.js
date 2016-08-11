@@ -72,7 +72,7 @@
         $viewrow.masonry({
           columnWidth: '.grid-sizer-library',
           gutter: '.gutter-sizer-library',
-          itemSelector: '.grid-item-library',
+          itemSelector: '.item-container',
           percentPosition: true,
           isFitWidth:true
         });
