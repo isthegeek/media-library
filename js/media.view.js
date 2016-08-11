@@ -12,6 +12,7 @@
   Drupal.behaviors.MediaLibraryView = {
     attach: function (context, settings) {
       var $view = $('.view-content', context);
+      $('.view-content').css("height", "0px");
       $view.once('media').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
 
       // Indicate that images are loading.
