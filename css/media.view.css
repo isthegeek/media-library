@@ -11,7 +11,7 @@
     width: 100% !important;
 }
 .view-content {
-    height : auto !important;
+   min-height : 300px;
 }
 select {
     max-width: 100% !important;
