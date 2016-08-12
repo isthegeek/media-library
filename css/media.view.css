@@ -8,6 +8,7 @@
 .view-content, .entities-list{
     margin: 0 auto;
     width: 100% !important;
+    height: auto !Important;
 }
 select {
     max-width: 100% !important;
