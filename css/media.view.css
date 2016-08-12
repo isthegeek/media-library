@@ -18,7 +18,7 @@ select {
     line-height: 24px !important;
     min-width: 100px !important;
 }
-#edit-actions{
+.fixed-edit-action{
     position: fixed;
     left: 0;
     right: 0;
@@ -49,6 +49,9 @@ select {
 }
 .pager {
     padding: 20px;
+    
+}
+.bottom-pager{
     position: relative;
     top: -55px;
     margin-bottom: 30px;
