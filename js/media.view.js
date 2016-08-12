@@ -12,7 +12,10 @@
   Drupal.behaviors.MediaLibraryView = {
     attach: function (context, settings) {
       var $view = $('.view-content', context);
-      $('.view-content').css("height", "0px");
+      var x= $('.view-media-library').find("#edit-actions");
+      var y= $('.view-media-library').find(".pager");
+      $(x).addClass("fixed-edit-action");
+      $(y).addClass("bottom-pager");
       $view.once('media').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
 
       // Indicate that images are loading.
