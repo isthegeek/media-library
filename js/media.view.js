@@ -11,11 +11,7 @@
 
   Drupal.behaviors.MediaLibraryView = {
     attach: function (context, settings) {
-      var $view = $('.view-content', context);
-      var x= $('.view-media-library').find("#edit-actions");
-      var y= $('.view-media-library').find(".pager");
-      $(x).addClass("fixed-edit-action");
-      $(y).addClass("bottom-pager");
+      
       $view.once('media').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
 
       // Indicate that images are loading.
@@ -35,6 +31,11 @@
       });
 
       $('.grid-item').once('bind-click-event').click(function () {
+        var $view = $('.view-content', context);
+      var x= $('.view-media-library').find("#edit-actions");
+      var y= $('.view-media-library').find(".pager");
+      $(x).addClass("fixed-edit-action");
+      $(y).addClass("bottom-pager");
         var input = $(this).find('.views-field-entity-browser-select input');
         input.prop('checked', !input.prop('checked'));
         if (input.prop('checked')) {
