@@ -9,9 +9,6 @@
     margin: 0 auto;
     width: 100% !important;
 }
-.view-content {
-   min-height : 300px;
-}
 select {
     max-width: 100% !important;
     padding: 2px !important;
