@@ -23,6 +23,7 @@
           gutter: '.gutter-sizer',
           itemSelector: '.grid-item',
           percentPosition: true,
+          isResizable: true,
           isFitWidth:true
         });
         // Add a class to reveal the loaded images, which avoids FOUC.
@@ -57,6 +58,7 @@
           gutter: '.gutter-sizer-library',
           itemSelector: '.grid-item-library',
           percentPosition: true,
+          isResizable: true,
           isFitWidth:true
         });
         // Add a class to reveal the loaded images, which avoids FOUC.
@@ -76,6 +78,7 @@
           gutter: '.gutter-sizer-library',
           itemSelector: '.item-container',
           percentPosition: true,
+          isResizable: true,
           isFitWidth:true
         });
         
