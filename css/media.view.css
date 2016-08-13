@@ -21,7 +21,7 @@
     background: transparent;
 }
 
-.grid-item.views-field-entity-browser-select , .grid-item-library.views-field-entity-browser-select{
+.grid-item.views-field-entity-browser-select{
     display: none;
 }
 
