@@ -7,6 +7,7 @@
 }
 .grid-item:hover {
     border: 2px solid #37802f !important;
+    cursor : pointer;
 }
 
 .grid-item.checked {
