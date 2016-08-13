@@ -16,6 +16,7 @@
     -webkit-box-sizing: border-box;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);
     border-radius: 3px;
+    text-align:center;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
@@ -41,4 +42,7 @@
         -webkit-column-count: 4;
         column-count: 4;
     }
+}
+#edit-actions{
+    text-align:center;
 }
