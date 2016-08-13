@@ -47,8 +47,7 @@
 
       // Indicate that images are loading.
       $viewuser.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
-      $viewuser.imagesLoaded(function () {
-        $viewuser.masonry({
+      $viewuser.masonry({
           columnWidth: '.grid-sizer-library',
           gutter: '.gutter-sizer-library',
           itemSelector: '.grid-item-library',
@@ -59,7 +58,6 @@
         // Add a class to reveal the loaded images, which avoids FOUC.
         $('.grid-item-library').addClass('item-style');
         $viewuser.find('.ajax-progress').remove();
-      });
       /*Slides View*/
       var $viewrow = $('.entities-list', context);
       $viewrow.once('media').prepend('<div class="grid-sizer-gallery"></div><div class="gutter-sizer-gallery"></div>');
