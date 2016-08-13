@@ -15,19 +15,17 @@
       $view.once('media').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
       // Indicate that images are loading.
       $view.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
-      $view.imagesLoaded(function () {
-        $view.masonry({
-          columnWidth: '.grid-sizer',
-          gutter: '.gutter-sizer',
-          itemSelector: '.grid-item',
-          percentPosition: true,
-          isResizable: true,
-          isFitWidth:true
-        });
-        // Add a class to reveal the loaded images, which avoids FOUC.
-        $('.grid-item').addClass('item-style');
-        $view.find('.ajax-progress').remove();
+      $view.masonry({
+        columnWidth: '.grid-sizer',
+        gutter: '.gutter-sizer',
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        isResizable: true,
+        isFitWidth:true
       });
+      // Add a class to reveal the loaded images, which avoids FOUC.
+      $('.grid-item').addClass('item-style');
+      $view.find('.ajax-progress').remove();
 
       $('.grid-item').once('bind-click-event').click(function () {
         var input = $(this).find('.views-field-entity-browser-select input');
@@ -63,7 +61,7 @@
         $('.grid-item-library').addClass('item-style');
         $viewuser.find('.ajax-progress').remove();
       });
-      
+
       /*Slides View*/
       var $viewrow = $('.entities-list', context);
       $viewrow.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
@@ -79,11 +77,12 @@
           isResizable: true,
           isFitWidth:true
         });
-        
+
         // Add a class to reveal the loaded images, which avoids FOUC.
         $('.item-container').addClass('item-style');
         $viewrow.find('.ajax-progress').remove();
       });
+      $view.css('height', 'auto');
     }
   };
 
