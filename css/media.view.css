@@ -214,10 +214,10 @@ input[type="submit"][name="filter"] {
 /* set default standard media queries for responsive grid. */
 @media only screen and (min-width: 320px) {
     .grid-size-library,
-    .grid-item-library,.item-container  {
+    .grid-item-library,.item-container, .grid-item-gallery  {
         width: 100% !important;
     }
-    .gutter-sizer-library {
+    .gutter-sizer-library, .gutter-sizer-gallery  {
         width: 5px;
     }
     .grid-item-library, .item-container{
@@ -227,10 +227,10 @@ input[type="submit"][name="filter"] {
 
 @media only screen and (min-width: 768px) {
     .grid-sizer-library,
-    .grid-item-library,.item-container  {
+    .grid-item-library,.item-container, .grid-item-gallery  {
         width: 96% !important;
     }
-    .gutter-sizer-library {
+    .gutter-sizer-library, .gutter-sizer-gallery  {
         width: 10px;
     }
     .grid-item-library,.item-container{
@@ -240,10 +240,10 @@ input[type="submit"][name="filter"] {
 
 @media only screen and (min-width: 992px) {
     .grid-sizer-library,
-    .grid-item-library, .item-container  {
+    .grid-item-library, .item-container, .grid-item-gallery  {
         width: 31.33% !important;
     }
-    .gutter-sizer-library {
+    .gutter-sizer-library, .gutter-sizer-gallery  {
         width: 10px;
     }
     .grid-item-library,.item-container{
@@ -254,10 +254,10 @@ input[type="submit"][name="filter"] {
 /* Jump back down for XL screens to better utilize the space. */
 @media only screen and (min-width: 1280px) {
     .grid-size-library,
-    .grid-item-library, .item-container  {
+    .grid-item-library, .item-container, .grid-item-gallery  {
         width: 23% !important;
     }
-    .gutter-sizer-library {
+    .gutter-sizer-library, , .gutter-sizer-gallery  {
         width: 7px;
     }
     .grid-item-library{
@@ -267,10 +267,10 @@ input[type="submit"][name="filter"] {
 
 @media only screen and (min-width: 1680px) {
     .grid-size-library,
-    .grid-item-library, .item-container  {
+    .grid-item-library, .item-container,.grid-item-gallery  {
         width: 21% !important;
     }
-    .gutter-sizer-library {
+    .gutter-sizer-library, .gutter-sizer-gallery {
         width: 7px;
     }
     .grid-item-library{
@@ -283,6 +283,7 @@ input[type="submit"][name="filter"] {
     width: 100%;
     display:block;
     height: auto;
+    vertical-align: text-top;
     position:relative;
     text-align: center;
     background: #fff;
