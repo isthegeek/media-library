@@ -11,7 +11,7 @@
 
   Drupal.behaviors.MediaLibraryView = {
     attach: function (context, settings) {
-      
+      var $view = $('.view-content', context);
       $view.once('media').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
       var x= $('.view-media-library').find("#edit-actions");
       var y= $('.view-media-library').find(".pager");
