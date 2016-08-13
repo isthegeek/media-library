@@ -41,6 +41,25 @@
           $(render).css('opacity',1);
         }
       });
+      /*User Gallery View*/
+      var $viewuser = $('.view-content', context);
+      $viewuser.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
+
+      // Indicate that images are loading.
+      $viewuser.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
+      $viewuser.imagesLoaded(function () {
+        $viewuser.masonry({
+          columnWidth: '.grid-sizer-library',
+          gutter: '.gutter-sizer-library',
+          itemSelector: '.grid-item-library',
+          percentPosition: true,
+          isResizable: true,
+          isFitWidth:true
+        });
+        // Add a class to reveal the loaded images, which avoids FOUC.
+        $('.grid-item-library').addClass('item-style');
+        $viewuser.find('.ajax-progress').remove();
+      });
       /*Slides View*/
       var $viewrow = $('.entities-list', context);
       $viewrow.once('media').prepend('<div class="grid-sizer-gallery"></div><div class="gutter-sizer-gallery"></div>');
