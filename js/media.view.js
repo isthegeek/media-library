@@ -13,10 +13,6 @@
     attach: function (context, settings) {
       var $view = $('.view-content', context);
       $view.once('media').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
-      var x= $('.view-media-library').find("#edit-actions");
-      var y= $('.view-media-library').find(".pager");
-      $(x).addClass("fixed-edit-action");
-      $(y).addClass("bottom-pager");
       // Indicate that images are loading.
       $view.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
       $view.imagesLoaded(function () {
