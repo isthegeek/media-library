@@ -41,37 +41,16 @@
           $(render).css('opacity',1);
         }
       });
-      /*For User Page*/
-
-      var $viewuser = $('.view-content', context);
-      $viewuser.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
-
-      // Indicate that images are loading.
-      $viewuser.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
-      $viewuser.imagesLoaded(function () {
-        $viewuser.masonry({
-          columnWidth: '.grid-sizer-library',
-          gutter: '.gutter-sizer-library',
-          itemSelector: '.grid-item-library',
-          percentPosition: true,
-          isResizable: true,
-          isFitWidth:true
-        });
-        // Add a class to reveal the loaded images, which avoids FOUC.
-        $('.grid-item-library').addClass('item-style');
-        $viewuser.find('.ajax-progress').remove();
-      });
-
       /*Slides View*/
       var $viewrow = $('.entities-list', context);
-      $viewrow.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
+      $viewrow.once('media').prepend('<div class="grid-sizer-gallery"></div><div class="gutter-sizer-gallery"></div>');
 
       // Indicate that images are loading.
       $viewrow.append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
       $viewrow.imagesLoaded(function () {
         $viewrow.masonry({
-          columnWidth: '.grid-sizer-library',
-          gutter: '.gutter-sizer-library',
+          columnWidth: '.grid-sizer-gallery',
+          gutter: '.gutter-sizer-gallery',
           itemSelector: '.item-container',
           percentPosition: true,
           isResizable: true,
