@@ -5,6 +5,26 @@
     -webkit-column-gap: 1.5em;
     column-gap: 1.5em;
 }
+.grid-item:hover {
+    border: 2px solid #37802f !important;
+}
+
+.grid-item.checked {
+    border: 2px solid #37802f !important;
+    background: url("../images/checkmark.svg") no-repeat center center !important;
+}
+.grid-item img, .grid-item-library img {
+    vertical-align: bottom;
+}
+
+.grid-item img::selection , .grid-item-library img::selection{
+    background: transparent;
+}
+
+.grid-item.views-field-entity-browser-select , .grid-item-library.views-field-entity-browser-select{
+    display: none;
+}
+
 .grid-item-library, .grid-item, .item-container{
     display: inline-block;
     background: #fff;
@@ -16,6 +36,7 @@
     -webkit-box-sizing: border-box;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);
     border-radius: 3px;
+    border: 1px solid #ddd;
     text-align:center;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
