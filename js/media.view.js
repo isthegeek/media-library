@@ -43,7 +43,7 @@
       });
       /*For User Page*/
 
-      var $viewuser = $('.view-content-library', context);
+      var $viewuser = $('.view-content', context);
       $viewuser.once('media').prepend('<div class="grid-sizer-library"></div><div class="gutter-sizer-library"></div>');
 
       // Indicate that images are loading.
